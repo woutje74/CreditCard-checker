@@ -23,14 +23,11 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5];
 
-const validCards = [];
 const invalidCards = [];
-
 
 function validateCred(original){
     console.log('Check this creditcard: ' + original);
     let creditCard = original.slice(0);
-    //console.log('Original cardnumber: ' + original);
     let x = creditCard.pop();
     creditCard.reverse();
     for (let j=0 ; j < creditCard.length ; (j += 2)){
@@ -49,9 +46,8 @@ function validateCred(original){
         }
 }
 
-
-    for (let i = 0; i < batch.length; i++){
-        validateCred(batch[i]);
+for (let i = 0; i < batch.length; i++){
+    validateCred(batch[i]);
     }
 
 console.log('These are invalid cards: ' + invalidCards);
